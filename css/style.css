@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* css reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* base styles */
+body {
+  font-family: 'Lato', sans-serif; /* base styles */
+  color: #333; /* base styles */
+  line-height: 1.6; /* base styles */
+}
+
+ul {
+  list-style-type: none; /* base styles */
+}
+
+a {
+  text-decoration: none; /* base styles */
+  color: #333; /* base styles */
+}
+
+h1, h2 {
+  font-weight: 300; /* base styles */
+  line-height: 1.2; /* base styles */
+  margin: 10px 0; /* base styles */
+}
+
+p {
+  margin: 10px 0; /* base styles */
+}
+
+img {
+  width: 100%; /* base styles */
+}
+
+.navbar {
+  background-color: #047aed;
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex; /* sets all the individual 'ul' elements into distinct columns and so, aligns them all horizontally */
+}
+
+.navbar a { /* sets the style for all 'a' elements nested within .navbar */
+  color: #fff; 
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {/* sets the style for all 'a' elements nested within .navbar on 'HOVER'*/
+  border-bottom: 2px solid #fff;
+;}
+
+.navbar .flex {
+  justify-content: space-between; /* 'flex' is being used as a class to justify content center. Other than when it is nested inside a navbar, then we will use space-betwen which places the elements within the container at the edges of the container and all the available space between */ 
+}
+
+.container {
+  max-width: 1100px; /* this ensures the nav elements (logo and links) do not move to edge of large screens */
+  margin: 0 auto;
+  overflow: auto; /* we use this to prevent the white space created by 'margin top' of 'h1 logo' */
+  padding: 0 40px; /* prevents the nav touching up against edge of screen, even on smaller screens */
+}
+
+.flex {
+  display: flex; /* turns it onto a flex column, so the 'a' elements fall into a column alongside the 'h1' */
+  justify-content: center; /* places the elements within the container at the edges of the container with all the available space betwen */ 
+  align-items: center; /* centers the items VERTICALLY in the container */
+  height: 100%;
+}
