@@ -41,6 +41,12 @@ img {
   width: 100%; /* base styles */
 }
 
+/* navbar */
+
+.logo {
+  font-weight: 900;
+}
+
 .navbar {
   background-color: var(--primary-color);
   color: #fff;
@@ -83,7 +89,7 @@ img {
 
 .showcase .grid {
   overflow: visible; /* allows the form card to push over edge of the showcase area */
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 55% auto;
   gap: 30px;
 }
 
@@ -129,54 +135,21 @@ img {
   -ms-transform: skewY(-3deg); /* ie browser supprt */
 }
 
-/* Utilities - these will be used all around the website*/
-.container {
-  max-width: 1100px; /* this ensures the nav elements (logo and links) do not move to edge of large screens */
-  margin: 0 auto;
-  overflow: auto; /* we use this to prevent the white space created by 'margin top' of 'h1 logo' */
-  padding: 0 40px; /* prevents the nav touching up against edge of screen, even on smaller screens */
+/* Stats */
+.stats {
+  padding-top: 100px;
 }
 
-.card {
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 10px;
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 30px;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+.stats .grid h3 {
+  font-size: 35px;
 }
 
-.btn-outline {
-  background-color: transparent;
-  border: 1px #fff solid;
-}
-
-.btn:hover {
-  transform: scale(0.98);
-}
-
-.flex {
-  display: flex; /* turns it onto a flex column, so the 'a' elements fall into a column alongside the 'h1' */
-  justify-content: center; /* places the elements within the container at the edges of the container with all the available space betwen */ 
-  align-items: center; /* centers the items VERTICALLY in the container */
-  height: 100%;
-}
-
-.grid {
-  display: grid; /* enables grid but nothing changes, need grid-template-columns: ;*/
-  grid-template-columns: repeat(2, 1fr); /* gives 2 x columns, each 1 fraction */
-  gap: 20px; /* used to be grid gap, adds a gap between columns */
-  justify-content: center; /* centers horizontally in div */
-  align-items: center; /* centers vertically in div */
-  height: 100%; /* of its container which is 'showcase' which has a height of 400px */
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
 }
